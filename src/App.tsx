@@ -5,33 +5,38 @@ import TodoApp from './component/To_do_list'
 import CourseList from "./component/CourseList"
 import CourseForm from "./component/CourseForm"
 import CourseDrop from "./component/CourseDrop"
-import DropButton from "./component/CourseButton"
+
 
 
 import './App.css'
 
 function App() {
   return (
-    <>
-      <div>
-        <CounterScore />
-        <CounterInc />
-        <CounterDec />            
-      </div>
+    <div className="app-root">
+      {/* ================= Counter Section ================= */}
+      <section className="section-card">
+        <h1>Counter App</h1>
+        <div className="counter-section">
+          <CounterScore />
+          <CounterInc />
+          <CounterDec />            
+        </div>
+      </section>
       
-      <div>
-        <h1>This is To_DO_LIST</h1>
+      {/* ================= To-do Section ================= */}
+      <section className="section-card">
+        <h1>My To-Do List</h1>
         <TodoApp />
-      </div>
+      </section>
 
-      <div>
-        <h1>This is Course Withdrawal</h1>
+      {/* ================= Course Section ================= */}
+      <section className="section-card">
+        <h1>Course Withdrawal</h1>
         <CourseForm />   
         <CourseList />   
         <CourseDrop />   
-      </div>
-    </>
+      </section>
+    </div>
   )
 }
-
 export default App

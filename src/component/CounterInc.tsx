@@ -1,6 +1,8 @@
 // CounterInc.tsx 
 import { useState } from "react";
 import { useCounterStore } from "../Store/CounterStore"; 
+import "../App.css";
+
 
 const CounterInc = () => { 
     const { count, increase, reset } = useCounterStore(); 

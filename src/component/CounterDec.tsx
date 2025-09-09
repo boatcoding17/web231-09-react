@@ -1,5 +1,6 @@
 // CounterDec.tsx 
 import { useCounterStore } from "../Store/CounterStore"; 
+import "../App.css";
 
  
 

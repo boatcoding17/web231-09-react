@@ -1,4 +1,6 @@
 import { useTodoStore } from "../Store/CounterStore";
+import "../App.css";
+
 
 function TodoApp(): JSX.Element {
   const { task, tasks, setTask, addTask, deleteTask } = useTodoStore();

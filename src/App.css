@@ -1,42 +1,315 @@
+/* ======================= General ======================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fff9c4);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 0.5em 0;
+  color: #222;
+}
+
+/* ======================= Card Base ======================= */
+.card,
+.counter-card,
+.score-card,
+.course-form,
+.course-list,
+.course-drop,
+.todo-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.counter-card:hover,
+.score-card:hover,
+.course-form:hover,
+.course-list:hover,
+.course-drop:hover,
+.todo-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* ======================= Counter ======================= */
+.counter-card {
+  display: inline-block;
+  min-width: 220px;
+  text-align: center;
+}
+
+.counter-card h2 {
+  color: #00796b;
+}
+
+.counter-card p {
+  font-size: 2.5rem;
+  margin: 12px 0;
+}
+
+.counter-card button {
+  margin: 5px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.inc-btn {
+  background-color: #26a69a;
+  color: #fff;
+}
+.inc-btn:hover {
+  background-color: #2bbbad;
+}
+
+.dec-btn {
+  background-color: #ef5350;
+  color: #fff;
+}
+.dec-btn:hover {
+  background-color: #e53935;
+}
+
+.reset-btn {
+  background-color: #42a5f5;
+  color: #fff;
+}
+.reset-btn:hover {
+  background-color: #1e88e5;
+}
+
+/* ======================= Score Card ======================= */
+.score-card {
+  background-color: #fff3e0;
+  color: #ff8f00;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ======================= Course Form ======================= */
+.course-form input,
+.course-form select {
+  padding: 14px;
+  margin: 8px 0;
+  width: calc(100% - 28px);
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.course-form input:focus,
+.course-form select:focus {
+  border-color: #42a5f5;
+  outline: none;
+  box-shadow: 0 0 8px rgba(66,165,245,0.3);
+}
+
+.course-form button.drop-button {
+  margin-top: 12px;
+  padding: 12px 24px;
+  background-color: #ef5350;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-form button.drop-button:hover {
+  background-color: #e53935;
+}
+
+/* ======================= Course List ======================= */
+.course-list ul,
+.course-drop ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li,
+.course-drop li {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #f1f8e9;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.course-list button.drop-button {
+  background-color: #ef5350;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 12px;
+}
+
+.course-list button.drop-button:hover {
+  background-color: #e53935;
+}
+
+/* ======================= ToDo App ======================= */
+.todo-container {
+  text-align: center;
+}
+
+.todo-header {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #00796b;
+}
+
+.todo-input {
+  padding: 14px;
+  width: 65%;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.todo-input:focus {
+  border-color: #26a69a;
+  outline: none;
+  box-shadow: 0 0 8px rgba(38,166,154,0.3);
+}
+
+.todo-add-btn {
+  padding: 14px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #26a69a;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.todo-add-btn:hover {
+  background-color: #2bbbad;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.todo-item {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  transition: 0.3s;
+  background-color: #e0f7fa;
+}
+
+.todo-delete-btn {
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ef5350;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.todo-delete-btn:hover {
+  background-color: #e53935;
+}
+
+/* ======================= App Root ======================= */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ======================= Course Item ======================= */
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background-color: #e3f2fd;
+  transition: 0.3s;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.course-item:hover {
+  background-color: #bbdefb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* ======================= Buttons ======================= */
+.drop-button {
+  background-color: #ef5350;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
 }
 
-.card {
-  padding: 2em;
+.drop-button:hover {
+  background-color: #e53935;
 }
 
-.read-the-docs {
-  color: #888;
+.add-btn {
+  background-color: #26a69a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
 }
+
+.add-btn:hover {
+  background-color: #2bbbad;
+}
+
+/* ======================= Input & Select ======================= */
+.course-form input,
+.course-form select {
+  display: block;
+  width: calc(100% - 28px);
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.course-form input:focus,
+.course-form select:focus {
+  border-color: #26a69a;
+  outline: none;
+  box-shadow: 0 0 8px rgba(38,166,154,0.3);
+}
+

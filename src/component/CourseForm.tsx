@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useWithdrawalStore } from "../Store/use_with_drawal_store";
+import "../App.css";
 
 export default function CourseForm() {
   const addCourse = useWithdrawalStore((s) => s.addCourse);
@@ -18,7 +19,7 @@ export default function CourseForm() {
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div className="course-form card">
       <h3>เพิ่มรายวิชา</h3>
       <input placeholder="รหัสวิชา" value={id} onChange={(e) => setId(e.target.value)} />
       <input placeholder="ชื่อวิชา (ไทย)" value={nameTH} onChange={(e) => setNameTH(e.target.value)} />
@@ -30,7 +31,7 @@ export default function CourseForm() {
         <option>A</option><option>B+</option><option>B</option>
         <option>C+</option><option>C</option><option>D+</option><option>D</option><option>F</option><option>W</option>
       </select>
-      <button onClick={handleSubmit}>เพิ่ม</button>
+      <button className="add-btn" onClick={handleSubmit}>เพิ่ม</button>
     </div>
   );
 }

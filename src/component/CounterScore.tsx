@@ -1,4 +1,5 @@
 // CounterScore.tsx 
+import "../App.css";
 
 import { useCounterStore } from "../Store/CounterStore"; 
 
