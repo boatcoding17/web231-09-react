@@ -1,19 +1,7 @@
-import { useState } from "react";
+import { useTodoStore } from "../Store/CounterStore";
 
 function TodoApp(): JSX.Element {
-  const [task, setTask] = useState<string>("");        // เก็บค่าที่พิมพ์ใน input
-  const [tasks, setTasks] = useState<string[]>([]);    // เก็บรายการงานทั้งหมด
-
-  const addTask = (): void => {
-    if (task.trim() === "") return;            // กัน input ว่าง
-    setTasks([...tasks, task]);                // เพิ่ม task ลงใน array
-    setTask("");                               // เคลียร์ input หลังเพิ่ม
-  };
-
-  const deleteTask = (index: number): void => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
-  };
+  const { task, tasks, setTask, addTask, deleteTask } = useTodoStore();
 
   // ====== Styles ======
   const containerStyle: React.CSSProperties = {
