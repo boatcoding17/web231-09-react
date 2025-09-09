@@ -7,7 +7,6 @@ import { useCounterStore } from "../Store/CounterStore";
 const CounterScore = () => { 
 
     const { count } = useCounterStore(); 
-
     return ( 
         <div > 
             <h1 >Counter {count * 10}</h1> 
