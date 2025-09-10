@@ -26,11 +26,20 @@ export default function CourseForm() {
       <input placeholder="ชื่อวิชา (อังกฤษ)" value={nameEN} onChange={(e) => setNameEN(e.target.value)} />
       <input type="number" placeholder="หน่วยกิต" value={credit} onChange={(e) => setCredit(Number(e.target.value))} />
       <input placeholder="อาจารย์ผู้สอน" value={teacher} onChange={(e) => setTeacher(e.target.value)} />
+      
       <select value={grade} onChange={(e) => setGrade(e.target.value)}>
         <option value="">-- เกรด --</option>
-        <option>A</option><option>B+</option><option>B</option>
-        <option>C+</option><option>C</option><option>D+</option><option>D</option><option>F</option><option>W</option>
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="C+">C+</option>
+        <option value="C">C</option>
+        <option value="D+">D+</option>
+        <option value="D">D</option>
+        <option value="F">F</option>
+        <option value="W">W</option>
       </select>
+      
       <button className="add-btn" onClick={handleSubmit}>เพิ่ม</button>
     </div>
   );

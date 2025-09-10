@@ -32,7 +32,14 @@ const gradeToPoint = (grade?: string): number => {
 };
 
 export const useWithdrawalStore = create<CourseState>((set, get) => ({
-  courses: [],
+  courses: [
+    { id: "10301211", nameTH: "คณิตศาสตร์สำหรับวิทยาการคอมพิวเตอร์", nameEN: "Mathematics for Computer Science", credit: 1, teacher: "อ.สมชาย" },
+    { id: "10301222", nameTH: "โครงสร้างข้อมูลและอัลกอริทึม", nameEN: "Data Structure and Algorithm", credit: 1, teacher: "อ.สมหญิง" },
+    { id: "10301223", nameTH: "ฐานข้อมูลโครงสร้างเชิงสัมพันธ์", nameEN: "Structure Relational Database", credit: 1, teacher: "อ.สมเกียรติ" },
+    { id: "10301225", nameTH: "วิศวกรรมซอฟต์แวร์", nameEN: "Software Engineering", credit: 1, teacher: "อ.สมหมาย" },
+    { id: "10301231", nameTH: "เว็บเทคโนโลยี", nameEN: "Web Technology", credit: 1, teacher: "อ.สมพร" },
+    { id: "10700313", nameTH: "ภาษาอังกฤษเชิงวิทยาศาสตร์และนวัตกรรม", nameEN: "English for Science and Innovation", credit: 2, teacher: "อ.สมปอง" },
+  ],
   addCourse: (course) =>
     set((state) => ({ courses: [...state.courses, course] })),
   dropCourse: (id) =>

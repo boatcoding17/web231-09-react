@@ -5,7 +5,7 @@ import TodoApp from './component/To_do_list'
 import CourseList from "./component/CourseList"
 import CourseForm from "./component/CourseForm"
 import CourseDrop from "./component/CourseDrop"
-
+import GPAResult from "./component/GPAResult"
 
 
 import './App.css'
@@ -35,6 +35,7 @@ function App() {
         <CourseForm />   
         <CourseList />   
         <CourseDrop />   
+        <GPAResult />
       </section>
     </div>
   )
